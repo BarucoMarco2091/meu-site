@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Animations */
+/* Animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (width >= 1024px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+    max-width: 1240px;
+    margin: auto;
+    padding: 3dvh;
+  }
+  nav .nav-list {
+    display: flex;
+    flex-direction: row !important;
+    gap: 2dvh;
+    list-style: none;
+  }
+}
+@media (width >= 1024px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    position: relative;
+  }
+  .hero .hero-container .frontend {
+    margin-bottom: 3dvh !important;
+  }
+  .hero .hero-container .hero-paragraph {
+    margin: 3dvh !important;
+  }
+  .hero .circle1 {
+    width: 7dvh;
+    height: 7dvh;
+    border-radius: 50%;
+    background-color: hsl(214, 95%, 59%);
+    position: relative;
+    right: 140dvh;
+    bottom: 10dvh;
+    animation: slideUp 1s alternate infinite;
+  }
+  .hero .circle2 {
+    width: 7dvh;
+    height: 7dvh;
+    border-radius: 50%;
+    background-color: hsl(158, 64%, 52%);
+    position: relative;
+    right: 20dvh;
+    bottom: 5dvh;
+    animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
+  }
+  .hero .circle3 {
+    width: 7dvh;
+    height: 7dvh;
+    border-radius: 50%;
+    background-color: hsl(214, 95%, 59%);
+    position: relative;
+    right: -20dvh;
+    bottom: -5dvh;
+    animation: float 3s ease-in-out infinite;
+  }
+}
+@media (width >= 1024px) {
+  .about-me {
+    max-width: 1240px;
+    margin: auto;
+  }
+  .about-me .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me .title h2 {
+    margin: 5dvh;
+  }
+  .about-me .title h2 span {
+    font-size: 3rem;
+  }
+  .about-me .about {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5dvh;
+  }
+  .about-me .about .about-text {
+    flex: 1;
+  }
+  .about-me .about .technologies {
+    flex: 1;
+    margin-top: 7dvh;
+  }
+  .about-me .about .technologies .tech-container div {
+    flex: 1;
+  }
+}
+header .bg {
+  background-color: hsl(0, 0%, 100%);
+}
+header .bg nav .logo img {
+  width: 7dvh;
+  height: 7dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+header .bg nav .nav-list .nav-link {
+  color: hsl(220, 9%, 46%);
+  transition: color 0.9s;
+}
+header .bg nav .nav-list .nav-link:hover {
+  color: hsl(214, 95%, 59%);
+}
+header .bg nav .nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2dvh;
+}
+header .bg nav .nav-icons button {
+  border-radius: 50%;
+  border: none;
+  width: 7dvh;
+  height: 7dvh;
+  background-color: hsl(220, 13%, 91%);
+  transition: background-color 0.9s;
+}
+header .bg nav .nav-icons button img {
+  width: 3dvh;
+  height: 3dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .bg nav .nav-icons button:hover {
+  background-color: hsl(0, 84%, 60%);
+}
+header .background {
+  background: linear-gradient(135deg, hsl(214, 95%, 59%), hsl(262, 83%, 58%));
+}
+header .background .hero {
+  height: 60dvh;
+}
+header .background .hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .background .hero .hero-container .frontend {
+  background-color: hsl(214, 95%, 59%);
+  padding: 1dvh;
+  border-radius: 2dvh;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-family: "Poppins", serif, Arial;
+  margin: 0 auto;
+  color: hsl(220, 14%, 96%);
+  margin: 2dvh;
+}
+header .background .hero .hero-container h1 {
+  color: hsl(220, 13%, 18%);
+}
+header .background .hero .hero-container .hero-paragraph {
+  color: hsl(220, 9%, 46%);
+  font-size: 1.3rem;
+}
+header .background .hero .hero-container .hero-paragraph .angular {
+  color: hsl(214, 95%, 59%);
+  font-size: 1.3rem;
+}
+header .background .hero .hero-container .hero-paragraph .javascript {
+  color: hsl(158, 64%, 52%);
+  font-size: 1.3rem;
+}
+header .background .hero .hero-container .hero-btn .project, header .background .hero .hero-container .hero-btn .portfolio {
+  height: 7dvh;
+  width: 20dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-right: 2dvh;
+}
+header .background .hero .hero-container .hero-btn .project {
+  background: linear-gradient(135deg, hsl(214, 95%, 59%), hsl(262, 83%, 58%));
+  color: hsl(220, 14%, 96%);
+  transition: transform 0.9s;
+}
+header .background .hero .hero-container .hero-btn .project:hover {
+  transform: scale(1.1);
+}
+header .background .hero .hero-container .hero-btn .portfolio {
+  border: 2px solid hsl(262, 83%, 58%);
+  color: hsl(214, 95%, 59%);
+  transition: background-color 0.9s, color 0.9s;
+}
+header .background .hero .hero-container .hero-btn .portfolio:hover {
+  background-color: hsl(214, 95%, 59%);
+  color: hsl(220, 14%, 96%);
+}
+
+main {
+  background-color: hsl(220, 13%, 91%);
+  padding: 1dvh 1dvh;
+}
+main .title {
+  display: flex;
+  flex-direction: column;
+}
+main .title h2 {
+  margin: 2dvh;
+  font-weight: 600;
+  color: hsl(220, 13%, 18%);
+}
+main .title h2 span {
+  color: hsl(214, 95%, 59%);
+}
+main .title p {
+  color: hsl(220, 9%, 46%);
+  font-size: 1.2rem;
+  margin-bottom: 2dvh;
+}
+main .about {
+  display: flex;
+  flex-direction: column;
+}
+main .about .about-text span {
+  color: hsl(220, 13%, 18%);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+main .about .about-text p {
+  line-height: 2rem;
+  color: hsl(220, 9%, 46%);
+  margin-top: 3dvh;
+}
+main .about .about-text .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2dvh;
+}
+main .about .about-text .grid .card {
+  display: flex;
+  flex-direction: column;
+}
+main .about .about-text .grid .card .card-img img {
+  width: 5dvh;
+  height: 5dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .about .technologies {
+  background-color: hsl(220, 14%, 96%);
+  border-radius: 3dvh;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding-top: 3dvh;
+  border: 1px solid hsl(220, 9%, 46%);
+}
+main .about .technologies .tech-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 3dvh !important;
+  margin-left: 3dvh;
+}
+main .about .technologies .tech-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3dvh;
+  margin-left: 3dvh;
+}
+main .about .technologies .tech-container .tech {
+  display: flex;
+  flex-direction: row;
+}
+main .about .technologies .tech-container .tech img {
+  width: 4dvh;
+  height: 4dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 2dvh;
+}
+main .info {
+  display: flex;
+  justify-content: space-around;
+  padding: 2dvh 2dvh;
+  border-top: 1px solid hsl(220, 9%, 46%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", serif, Arial;
+  font-size: 3rem;
+}
+
+p,
+span {
+  font-family: "Poppins", serif, Arial;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Poppins", serif, Arial;
+  font-size: 1rem;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Poppins", serif, Arial;
+  font-size: 1rem;
+}
+
+i {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+}
+
+@media (width <= 1024px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

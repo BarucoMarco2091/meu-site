@@ -1,0 +1,137 @@
+@use 'variables';
+@use 'responsivity';
+
+header {
+
+    .bg {
+        background-color: variables.$background;
+
+        nav {
+
+            .logo {
+
+                img {
+                    width: 7dvh;
+                    height: 7dvh;
+                    object-fit: contain;
+                    border-radius: 50%;
+                }
+            }
+
+            .nav-list {
+
+                .nav-link {
+                    color: variables.$mutedForeground;
+                    transition: color .9s;
+                }
+
+                .nav-link:hover {
+                    color: variables.$primary;
+                }
+            }
+
+            .nav-icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2dvh;
+
+                button {
+                    border-radius: 50%;
+                    border: none;
+                    width: 7dvh;
+                    height: 7dvh;
+                    background-color: variables.$border;
+                    transition: background-color .9s;
+
+                    img {
+                        width: 3dvh;
+                        height: 3dvh;
+                        object-fit: contain;
+                    }
+                }
+
+                button:hover {
+                    background-color: variables.$destructive;
+                }
+            }
+        }
+    }
+
+    .background {
+        background: variables.$gradientHero;
+       
+        .hero {
+            height: 60dvh;
+
+            .hero-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .frontend {
+                    background-color: variables.$primary;
+                    padding: 1dvh;
+                    border-radius: 2dvh;
+                    max-width: fit-content;
+                    font-family: 'Poppins', serif, Arial;
+                    margin: 0 auto;
+                    color: variables.$muted;
+                    margin: 2dvh;
+                }
+
+                h1 {
+                    color: variables.$foreground;
+                }
+
+                .hero-paragraph {
+                    color: variables.$muted;
+                    font-size: 1.3rem;
+
+                    .angular {
+                        color: variables.$ring;
+                        font-size: 1.3rem;
+                    }
+
+                    .javascript {
+                        color: variables.$accent;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .hero-btn {
+
+                    .project, .portfolio {
+                        height: 7dvh;
+                        width: 20dvh;
+                        border: none;
+                        border-radius: 2dvh;
+                        margin-right: 2dvh;
+                    }
+
+                    .project {
+                        background: variables.$gradientPrimary;
+                        color: variables.$muted;
+                        transition: transform .9s;
+                    }
+
+                    .project:hover {
+                        transform: scale(1.1);
+                    }
+
+                    .portfolio {
+                        border: 2px solid variables.$secondary;
+                        color: variables.$ring;
+                        transition: background-color .9s, color .9s;
+                    }
+
+                      .portfolio:hover {
+                        background-color: variables.$ring;
+                        color: variables.$muted;
+                      }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+@use 'variables';
+@use 'responsivity';
+
+main {
+    background-color: variables.$border;
+    padding: 1dvh 1dvh;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin: 2dvh;
+            font-weight: 600;
+            color: variables.$foreground;
+
+            span {
+                color: variables.$primary;
+            }
+        }
+
+        p {
+            color: variables.$mutedForeground;
+            font-size: 1.2rem;
+            margin-bottom: 2dvh;
+        }
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+
+        .about-text {
+
+            span {
+                color: variables.$foreground;
+                font-weight: 600;
+                font-size: 1.3rem;
+            }
+
+            p {
+                line-height: 2rem;
+                color: variables.$mutedForeground;
+                margin-top: 3dvh;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin: 2dvh;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+
+                    .card-img {
+
+                        img {
+                            width: 5dvh;
+                            height: 5dvh;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+
+        .technologies {
+            background-color: variables.$muted;
+            border-radius: 3dvh;
+            max-height: fit-content;
+            padding: 2dvh 3dvh;
+            border: 1px solid variables.$mutedForeground;
+
+            .tech-title {
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin-top: 3dvh !important;
+                margin-left: 3dvh;
+            }
+
+            .tech-container {
+                display: flex;
+                flex-direction: row;
+                margin-top: 3dvh;
+                margin-left: 3dvh;
+
+                .tech {
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        width: 4dvh;
+                        height: 4dvh;
+                        object-fit: contain;
+                        margin: 2dvh;
+                    }
+                }
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-around;
+        padding: 2dvh 2dvh;
+        border-top: 1px solid variables.$mutedForeground;
+
+        p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        span {
+            color: variables.$mutedForeground;
+        }
+
+        .projects {
+
+            p {
+                color: variables.$primary;
+            }
+        }
+
+        .years {
+
+            p {
+                color: variables.$secondary;
+            }
+        }
+
+        .dedication {
+
+            p {
+                color: variables.$accent;
+            }
+        }
+    }
+}

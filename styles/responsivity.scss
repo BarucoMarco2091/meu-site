@@ -1,0 +1,119 @@
+@use 'variables';
+
+@media (width >=1024px) {
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+        max-width: 1240px;
+        margin: auto;
+        padding: 3dvh;
+
+        .nav-list {
+            display: flex;
+            flex-direction: row !important;
+            gap: 2dvh;
+            list-style: none;
+        }
+    }
+}
+
+@media (width >=1024px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1240px;
+        margin: auto;
+        position: relative;
+
+        .hero-container {
+
+            .frontend {
+                margin-bottom: 3dvh !important;
+            }
+
+
+            .hero-paragraph {
+                margin: 3dvh !important;
+            }
+        }
+
+        .circle1 {
+            width: 7dvh;
+            height: 7dvh;
+            border-radius: 50%;
+            background-color: variables.$primary;
+            position: relative;
+            right: 140dvh;
+            bottom: 10dvh;
+            animation: slideUp 1s alternate infinite;
+        }
+
+        .circle2 {
+            width: 7dvh;
+            height: 7dvh;
+            border-radius: 50%;
+            background-color: variables.$accent;
+            position: relative;
+            right: 20dvh;
+            bottom: 5dvh;
+            animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
+        }
+
+        .circle3 {
+            width: 7dvh;
+            height: 7dvh;
+            border-radius: 50%;
+            background-color: variables.$ring;
+            position: relative;
+            right: -20dvh;
+            bottom: -5dvh;
+            animation: float 3s ease-in-out infinite;
+        }
+    }
+}
+
+@media (width >=1024px) {
+    .about-me {
+        max-width: 1240px;
+        margin: auto;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                margin: 5dvh;
+
+                span {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5dvh;
+
+            .about-text {
+                flex: 1;
+            }
+
+            .technologies {
+                flex: 1;
+                margin-top: 7dvh;
+
+                .tech-container {
+
+                    div {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}
