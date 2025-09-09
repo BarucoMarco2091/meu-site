@@ -76,9 +76,9 @@
     height: 7dvh;
     border-radius: 50%;
     background-color: hsl(214, 95%, 59%);
-    position: relative;
-    right: 140dvh;
-    bottom: 10dvh;
+    position: absolute;
+    left: 30dvh;
+    bottom: 50dvh;
     animation: slideUp 1s alternate infinite;
   }
   .hero .circle2 {
@@ -86,9 +86,9 @@
     height: 7dvh;
     border-radius: 50%;
     background-color: hsl(158, 64%, 52%);
-    position: relative;
-    right: 20dvh;
-    bottom: 5dvh;
+    position: absolute;
+    right: 40dvh;
+    bottom: 45dvh;
     animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
   }
   .hero .circle3 {
@@ -96,9 +96,9 @@
     height: 7dvh;
     border-radius: 50%;
     background-color: hsl(214, 95%, 59%);
-    position: relative;
-    right: -20dvh;
-    bottom: -5dvh;
+    position: absolute;
+    right: 20dvh;
+    bottom: 35dvh;
     animation: float 3s ease-in-out infinite;
   }
 }
@@ -120,8 +120,12 @@
   }
   .about-me .about {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     margin-top: 5dvh;
+  }
+  .about-me .about .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   .about-me .about .about-text {
     flex: 1;
@@ -130,8 +134,97 @@
     flex: 1;
     margin-top: 7dvh;
   }
+  .about-me .about .technologies .tech-container {
+    display: flex;
+    flex-direction: row !important;
+  }
   .about-me .about .technologies .tech-container div {
     flex: 1;
+  }
+}
+@media (width >= 1024px) {
+  .projetos {
+    display: flex;
+    max-width: 1240px;
+    margin: auto;
+  }
+  .projetos h2 {
+    margin: 5dvh;
+  }
+  .projetos h2 span {
+    font-size: 3rem !important;
+  }
+  .projetos .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .projetos .grid-container .card-tech {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .projetos .card-btn {
+    margin-top: 5dvh !important;
+    padding-bottom: 5dvh;
+  }
+}
+@media (width >= 1024px) {
+  .testimonials {
+    display: flex;
+    max-width: 1240px;
+    margin: auto;
+  }
+  .testimonials h2 {
+    margin: 5dvh;
+  }
+  .testimonials h2 span {
+    font-size: 3rem !important;
+  }
+  .testimonials .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2dvh;
+    margin: 5dvh !important;
+  }
+}
+@media (width >= 1024px) {
+  .contacts {
+    max-width: 1240px !important;
+    margin: auto !important;
+    display: flex;
+    margin-top: 5dvh;
+  }
+  .contacts h2 {
+    margin: 5dvh;
+  }
+  .contacts h2 span {
+    font-size: 3rem !important;
+  }
+  .contacts .contact-container {
+    display: flex;
+    flex-direction: row !important;
+    max-width: 1240px;
+    margin: auto;
+    margin-top: 5dvh;
+  }
+  .contacts .contact-container div {
+    flex: 1;
+  }
+  .contacts .contact-container .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contacts .contact-container .contact h3 {
+    margin-bottom: 2dvh;
+  }
+  .contacts .contact-container .contact p {
+    line-height: 2rem;
+    margin-bottom: 3dvh;
+  }
+  .contacts .formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 header .bg {
@@ -179,12 +272,14 @@ header .background {
 }
 header .background .hero {
   height: 60dvh;
+  position: relative;
 }
 header .background .hero .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 header .background .hero .hero-container .frontend {
   background-color: hsl(214, 95%, 59%);
@@ -199,10 +294,12 @@ header .background .hero .hero-container .frontend {
 }
 header .background .hero .hero-container h1 {
   color: hsl(220, 13%, 18%);
+  margin: 1dvh;
 }
 header .background .hero .hero-container .hero-paragraph {
-  color: hsl(220, 9%, 46%);
+  color: hsl(220, 14%, 96%);
   font-size: 1.3rem;
+  margin: 1dvh;
 }
 header .background .hero .hero-container .hero-paragraph .angular {
   color: hsl(214, 95%, 59%);
@@ -212,7 +309,8 @@ header .background .hero .hero-container .hero-paragraph .javascript {
   color: hsl(158, 64%, 52%);
   font-size: 1.3rem;
 }
-header .background .hero .hero-container .hero-btn .project, header .background .hero .hero-container .hero-btn .portfolio {
+header .background .hero .hero-container .hero-btn .project,
+header .background .hero .hero-container .hero-btn .portfolio {
   height: 7dvh;
   width: 20dvh;
   border: none;
@@ -236,9 +334,38 @@ header .background .hero .hero-container .hero-btn .portfolio:hover {
   background-color: hsl(214, 95%, 59%);
   color: hsl(220, 14%, 96%);
 }
+header .background .hero .circle1 {
+  width: 7dvh;
+  height: 7dvh;
+  border-radius: 50%;
+  background-color: hsl(214, 95%, 59%);
+  position: absolute;
+  left: 10%;
+  bottom: 50%;
+  animation: slideUp 1s alternate infinite;
+}
+header .background .hero .circle2 {
+  width: 7dvh;
+  height: 7dvh;
+  border-radius: 50%;
+  background-color: hsl(158, 64%, 52%);
+  position: absolute;
+  right: 65%;
+  bottom: 20%;
+  animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
+}
+header .background .hero .circle3 {
+  width: 7dvh;
+  height: 7dvh;
+  border-radius: 50%;
+  background-color: hsl(214, 95%, 59%);
+  position: absolute;
+  right: 10%;
+  bottom: 40%;
+  animation: float 3s ease-in-out infinite;
+}
 
 main {
-  background-color: hsl(220, 13%, 91%);
   padding: 1dvh 1dvh;
 }
 main .title {
@@ -258,60 +385,83 @@ main .title p {
   font-size: 1.2rem;
   margin-bottom: 2dvh;
 }
-main .about {
+main .about-me {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main .about-me h2 {
+  margin: 2dvh;
+  font-weight: 600;
+  color: hsl(220, 13%, 18%);
+}
+main .about-me h2 span {
+  color: hsl(214, 95%, 59%);
+  font-size: 1.5rem;
+}
+main .about-me .about {
   display: flex;
   flex-direction: column;
 }
-main .about .about-text span {
+main .about-me .about .about-text span {
   color: hsl(220, 13%, 18%);
   font-weight: 600;
   font-size: 1.3rem;
 }
-main .about .about-text p {
+main .about-me .about .about-text p {
   line-height: 2rem;
   color: hsl(220, 9%, 46%);
   margin-top: 3dvh;
 }
-main .about .about-text .grid {
+main .about-me .about .about-text .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   margin: 2dvh;
 }
-main .about .about-text .grid .card {
+main .about-me .about .about-text .grid .card {
   display: flex;
   flex-direction: column;
 }
-main .about .about-text .grid .card .card-img img {
+main .about-me .about .about-text .grid .card .card-img img {
   width: 5dvh;
   height: 5dvh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .about .technologies {
+main .about-me .about .technologies {
   background-color: hsl(220, 14%, 96%);
   border-radius: 3dvh;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  padding-top: 3dvh;
+  padding: 2dvh 3dvh;
   border: 1px solid hsl(220, 9%, 46%);
 }
-main .about .technologies .tech-title {
+main .about-me .about .technologies .tech-title {
   font-weight: 600;
   font-size: 1.1rem;
   margin-top: 3dvh !important;
   margin-left: 3dvh;
 }
-main .about .technologies .tech-container {
+main .about-me .about .technologies .tech-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 3dvh;
   margin-left: 3dvh;
+  max-width: -moz-fit-content !important;
+  max-width: fit-content !important;
+  margin-bottom: 2dvh;
 }
-main .about .technologies .tech-container .tech {
+main .about-me .about .technologies .tech-container .container,
+main .about-me .about .technologies .tech-container .technology-container {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+main .about-me .about .technologies .tech-container .tech {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
-main .about .technologies .tech-container .tech img {
+main .about-me .about .technologies .tech-container .tech img {
   width: 4dvh;
   height: 4dvh;
   -o-object-fit: contain;
@@ -323,6 +473,344 @@ main .info {
   justify-content: space-around;
   padding: 2dvh 2dvh;
   border-top: 1px solid hsl(220, 9%, 46%);
+}
+main .info p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+main .info span {
+  color: hsl(220, 9%, 46%);
+}
+main .info .projects p {
+  color: hsl(214, 95%, 59%);
+}
+main .info .years p {
+  color: hsl(262, 83%, 58%);
+}
+main .info .dedication p {
+  color: hsl(158, 64%, 52%);
+}
+main .bg {
+  background-color: hsl(220, 14%, 96%);
+}
+main .bg .projetos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .bg .projetos h2 {
+  color: hsl(220, 13%, 18%);
+  margin: 2dvh;
+  font-weight: 600;
+}
+main .bg .projetos h2 span {
+  color: hsl(214, 95%, 59%);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .bg .projetos p {
+  color: hsl(220, 9%, 46%);
+  font-size: 1.2rem;
+  margin-bottom: 2dvh;
+}
+main .bg .projetos .grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+main .bg .projetos .grid-container .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  margin: 3dvh;
+  border-radius: 2dvh;
+  overflow: hidden;
+}
+main .bg .projetos .grid-container .card .card-img {
+  position: relative;
+  margin-bottom: 3dvh;
+}
+main .bg .projetos .grid-container .card .card-img img {
+  transition: filter 0.9s, transform 0.9s;
+}
+main .bg .projetos .grid-container .card .card-img img:hover {
+  filter: brightness(50%);
+  transform: scale(1.1);
+}
+main .bg .projetos .grid-container .card .card-img .card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2dvh;
+  position: absolute;
+  top: 5dvh;
+  visibility: hidden;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+main .bg .projetos .grid-container .card .card-img .card-btn button {
+  height: 5dvh;
+  width: 20dvh;
+  border: none;
+  border-radius: 2dvh;
+  color: hsl(220, 14%, 96%);
+}
+main .bg .projetos .grid-container .card .card-img .card-btn button img {
+  width: 3dvh;
+  height: 3dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .bg .projetos .grid-container .card .card-img .card-btn .card-project {
+  background-color: hsl(214, 95%, 59%);
+}
+main .bg .projetos .grid-container .card .card-img .card-btn .github {
+  background-color: hsl(220, 14%, 96%);
+  color: hsl(220, 13%, 18%);
+  font-weight: 400;
+}
+main .bg .projetos .grid-container .card .card-img:hover .card-btn {
+  visibility: visible;
+  opacity: 1;
+}
+main .bg .projetos .grid-container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1dvh 1dvh;
+}
+main .bg .projetos .grid-container .card .card-body .card-title {
+  color: hsl(220, 13%, 18%);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 2dvh;
+}
+main .bg .projetos .grid-container .card .card-body .card-description {
+  color: hsl(220, 13%, 18%);
+}
+main .bg .projetos .grid-container .card .card-body .card-tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1dvh;
+}
+main .bg .projetos .grid-container .card .card-body .card-tech div {
+  display: flex;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 1dvh;
+  height: 3dvh;
+  background-color: hsl(214, 95%, 59%);
+  color: hsl(220, 14%, 96%);
+  font-family: "Poppins", serif, Arial;
+  font-size: 1.1rem;
+  padding: 1dvh 1dvh;
+  border-radius: 2dvh;
+}
+main .bg .projetos .card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1dvh;
+}
+main .bg .projetos .card-btn .todos-projetos-btn {
+  border: 2px solid hsl(214, 95%, 59%);
+  border-radius: 2dvh;
+  height: 8dvh;
+  width: 35dvh;
+  color: hsl(214, 95%, 59%);
+  transition: background-color 0.9s, color 0.9s;
+}
+main .bg .projetos .card-btn .todos-projetos-btn img {
+  width: 3dvh;
+  height: 3dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .bg .projetos .card-btn .todos-projetos-btn:hover {
+  background-color: hsl(214, 95%, 59%);
+  color: hsl(220, 14%, 96%);
+}
+main .background {
+  background-color: hsl(0, 0%, 100%);
+}
+main .background .testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+main .background .testimonials h2 {
+  color: hsl(220, 13%, 18%);
+  font-weight: 600;
+  margin: 2dvh;
+}
+main .background .testimonials h2 span {
+  color: hsl(214, 95%, 59%);
+  font-size: 1.5rem;
+}
+main .background .testimonials p {
+  color: hsl(220, 9%, 46%);
+  font-size: 1.2rem;
+  margin-bottom: 2dvh;
+}
+main .background .testimonials .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2dvh;
+}
+main .background .testimonials .grid .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  border-radius: 2dvh;
+  background: linear-gradient(135deg, hsl(158, 64%, 52%), hsl(214, 95%, 59%));
+  margin: 2dvh;
+}
+main .background .testimonials .grid .card .card-image {
+  margin: 2dvh 2dvh;
+}
+main .background .testimonials .grid .card .card-image .img-quotes {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2dvh;
+}
+main .background .testimonials .grid .card .card-image .img-quotes img {
+  width: 4dvh;
+  height: 4dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .background .testimonials .grid .card .card-image .img-star {
+  display: flex;
+  flex-direction: row;
+  gap: 1dvh;
+}
+main .background .testimonials .grid .card .card-image .img-star img {
+  width: 4dvh;
+  height: 4dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 2dvh;
+}
+main .background .testimonials .grid .card .card-body .card-testimonial {
+  color: hsl(220, 14%, 96%);
+}
+main .background .testimonials .grid .card .card-body .card-name {
+  color: hsl(220, 14%, 96%);
+  font-weight: 600;
+}
+main .back {
+  background-color: hsl(0, 0%, 100%);
+}
+main .back .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1dvh 1dvh;
+}
+main .back .contacts h2 {
+  color: hsl(220, 13%, 18%);
+  margin: 2dvh;
+  font-weight: 600;
+}
+main .back .contacts h2 span {
+  color: hsl(214, 95%, 59%);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .back .contacts p {
+  color: hsl(220, 9%, 46%);
+  font-size: 1.2rem;
+  margin-bottom: 2dvh;
+}
+main .back .contacts .contact-container {
+  display: flex;
+  flex-direction: column;
+}
+main .back .contacts .contact-container .contact h3 {
+  font-family: "Poppins", serif, Arial;
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(220, 13%, 18%);
+  margin: 1dvh 1dvh;
+}
+main .back .contacts .contact-container .contact .email,
+main .back .contacts .contact-container .contact .location,
+main .back .contacts .contact-container .contact .phone {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 2dvh;
+  max-width: 90%;
+  border: 2px solid hsl(220, 13%, 91%);
+  border-radius: 2dvh;
+}
+main .back .contacts .contact-container .contact .email .email-img, main .back .contacts .contact-container .contact .email .phone-img, main .back .contacts .contact-container .contact .email .location-img,
+main .back .contacts .contact-container .contact .location .email-img,
+main .back .contacts .contact-container .contact .location .phone-img,
+main .back .contacts .contact-container .contact .location .location-img,
+main .back .contacts .contact-container .contact .phone .email-img,
+main .back .contacts .contact-container .contact .phone .phone-img,
+main .back .contacts .contact-container .contact .phone .location-img {
+  display: flex;
+  justify-content: start;
+}
+main .back .contacts .contact-container .contact .email .email-img img, main .back .contacts .contact-container .contact .email .phone-img img, main .back .contacts .contact-container .contact .email .location-img img,
+main .back .contacts .contact-container .contact .location .email-img img,
+main .back .contacts .contact-container .contact .location .phone-img img,
+main .back .contacts .contact-container .contact .location .location-img img,
+main .back .contacts .contact-container .contact .phone .email-img img,
+main .back .contacts .contact-container .contact .phone .phone-img img,
+main .back .contacts .contact-container .contact .phone .location-img img {
+  width: 4dvh;
+  height: 4dvh;
+  margin: 1dvh 1dvh;
+}
+main .back .contacts .contact-container .contact .email .email-body, main .back .contacts .contact-container .contact .email .phone-body, main .back .contacts .contact-container .contact .email .location-body,
+main .back .contacts .contact-container .contact .location .email-body,
+main .back .contacts .contact-container .contact .location .phone-body,
+main .back .contacts .contact-container .contact .location .location-body,
+main .back .contacts .contact-container .contact .phone .email-body,
+main .back .contacts .contact-container .contact .phone .phone-body,
+main .back .contacts .contact-container .contact .phone .location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 1dvh 1dvh;
+}
+main .back .contacts .contact-container .contact .email .email-body span, main .back .contacts .contact-container .contact .email .phone-body span, main .back .contacts .contact-container .contact .email .location-body span,
+main .back .contacts .contact-container .contact .location .email-body span,
+main .back .contacts .contact-container .contact .location .phone-body span,
+main .back .contacts .contact-container .contact .location .location-body span,
+main .back .contacts .contact-container .contact .phone .email-body span,
+main .back .contacts .contact-container .contact .phone .phone-body span,
+main .back .contacts .contact-container .contact .phone .location-body span {
+  color: hsl(220, 13%, 18%);
+  font-weight: 600;
+}
+main .back .formulario {
+  display: flex;
+}
+main .back .formulario .nome, main .back .formulario .mail, main .back .formulario .msg {
+  display: flex;
+  flex-direction: column;
+}
+main .back .formulario .nome label, main .back .formulario .mail label, main .back .formulario .msg label {
+  font-family: "Poppins", serif, Arial;
+  font-size: 1rem;
+  color: hsl(220, 13%, 18%);
+}
+main .back .formulario .nome .name, main .back .formulario .mail .name, main .back .formulario .msg .name {
+  max-width: 90%;
 }
 
 * {
@@ -349,11 +837,7 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "Roboto", serif, Arial;
   font-size: 3rem;
 }

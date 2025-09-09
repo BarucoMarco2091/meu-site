@@ -24,25 +24,31 @@
                 <div class="nav-menu">
                     <ul class="nav-list">
                         <li>
-                            <a class="nav-link" href="#">Sobre</a>
+                            <a class="nav-link" href="#sobre">Sobre</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#">Projetos</a>
+                            <a class="nav-link" href="#trabalhos">Projetos</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#">Depoimentos</a>
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
                 </div>
                 <div class="nav-icons">
                     <button>
-                        <img src="assets/github.png" alt="">
+                        <a href="https://github.com/BarucoMarco2091" target="_blank"><img src="assets/github.png"
+                                alt=""></a>
                     </button>
                     <button>
-                        <img src="assets/linkedin.png" alt="">
+                        <a href="https://www.linkedin.com/in/marco-baruco-3bb3512a3/" target="_blank"><img
+                                src="assets/linkedin.png" alt=""></a>
+                    </button>
+                    <button>
+                        <a href="https://www.instagram.com/baruco_dev/" target="_blank"><img
+                                src="assets/instagram (2).png" alt=""></a>
                     </button>
                 </div>
             </nav>
@@ -60,9 +66,10 @@
                         <button class="project">
                             Iniciar Projeto
                         </button>
-                        <button class="portfolio">
-                            Ver Portfólio
-                        </button>
+                        <a href="https://new-portfolio-omega-nine.vercel.app/" target="_blank"><button
+                                class="portfolio">
+                                Ver Portfólio
+                            </button></a>
                     </div>
                 </div>
                 <div class="circle1"></div>
@@ -72,7 +79,7 @@
         </div>
     </header>
     <main>
-        <section class="about-me">
+        <section class="about-me" id="sobre">
             <div class="title">
                 <h2>Sobre <span>Mim</span></h2>
                 <p>Desenvolvedor apaixonado por criar soluções digitais que fazem a diferença.</p>
@@ -166,31 +173,189 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
-            <h2>Meus <span>Projetos</span></h2>
-            <p>Alguns dos projetos que desenvolvi com paixão e dedicação.</p>
-            <div class="grid-container">
-                <div class="card">
-                    <div class="card-img">
-
+        <div class="bg">
+            <section class="projetos" id="trabalhos">
+                <h2>Meus <span>Projetos</span></h2>
+                <p>Alguns dos projetos que desenvolvi com paixão e dedicação.</p>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/Captura de tela 2025-08-25 144742.jpg" alt="" loading="lazy">
+                            <div class="card-btn">
+                                <a href="https://nutricionista-landing-page.vercel.app/" target="_blank"><button
+                                        class="card-project"> <img src="assets/message-square-share (1).png" alt=""
+                                            loading="lazy"> Ver
+                                        Projeto</button></a>
+                                <a href="https://github.com/BarucoMarco2091/nutricionista-landing-page"
+                                    target="_blank"><button class="github"> <img src="assets/github (3).png" alt=""
+                                            loading="lazy">
+                                        Codigo</button></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-title">
+                                Landing Page para Nutricionista
+                            </span>
+                            <p class="card-description">
+                                Página profissional para nutricionista, destacando serviços, depoimentos e chamada para
+                                agendamento via WhatsApp.
+                            </p>
+                            <div class="card-tech">
+                                <div>HTML</div>
+                                <div>SCSS</div>
+                                <div>JavaScript</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/Captura de tela 2025-08-25 144907.jpg" alt="" loading="lazy">
+                            <div class="card-btn">
+                                <a href="https://personal-trainer-page.vercel.app/" target="_blank"><button
+                                        class="card-project"><img src="assets/message-square-share (1).png" alt=""
+                                            loading="lazy">Ver
+                                        Projeto</button></a>
+                                <a href="https://github.com/BarucoMarco2091/personal-trainer-page"
+                                    target="_blank"><button class="github"><img src="assets/github (3).png" alt=""
+                                            loading="lazy">Codigo</button></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-title">
+                                Landing Page para Personal Trainer
+                            </span>
+                            <p class="card-description">
+                                Página profissional para personal trainer, destacando serviços, planos de treino,
+                                depoimentos e contato rápido pelo WhatsApp.
+                            </p>
+                            <div class="card-tech">
+                                <div>HTML</div>
+                                <div>SCSS</div>
+                                <div>JavaScript</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-img">
-
+                <div class="card-btn">
+                    <a href="https://github.com/BarucoMarco2091" target="_blank"><button class="todos-projetos-btn"><img
+                                src="assets/github (2).png" alt="" loading="lazy">Ver Todos
+                            os Projetos</button></a>
+                </div>
+            </section>
+        </div>
+        <div class="background">
+            <section class="testimonials" id="depoimentos">
+                <h2>O que dizem meus <span>Clientes?</span></h2>
+                <p>Feedback genuíno de clientes que confiaram em meu trabalho</p>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="img-quotes">
+                                <img src="assets/quote (2).png" alt="" loading="lazy">
+                            </div>
+                            <div class="img-star">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-testimonial">"Marco entregou nosso projeto no prazo e<br>superou todas as
+                                expectativas. A<br>qualidade do código e atenção aos<br>detalhes são impressionantes.
+                                Definitivamente trabalharemos juntos novamente."</p>
+                            <span class="card-name">Ana Paula</span>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="img-quotes">
+                                <img src="assets/quote (2).png" alt="" loading="lazy">
+                            </div>
+                            <div class="img-star">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                                <img src="assets/star.png" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-testimonial">"Trabalho excepcional! Marco transformou<br>nossa visão em uma
+                                plataforma incrível.<br>A comunicação foi clara durante todo o<br>processo e o resultado
+                                final foi além do<br>que imaginávamos."</p>
+                            <span class="card-name">Carlos Fernandez</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button>Ver Todos os Projetos</button>
-        </section>
+            </section>
+        </div>
+        <div class="back">
+            <section class="contacts" id="contato">
+                <h2>Vamos trabalhar <span>juntos?</span></h2>
+                <p>Pronto para transformar sua ideia em realidade? Entre em contato e vamos conversar!</p>
+                <div class="contact-container">
+                    <div class="contact">
+                        <h3>Entre em Contato</h3>
+                        <p>Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer
+                            parte da sua equipe. Não hesite em entrar em contato se quiser apenas dar um oi!</p>
+                        <div class="email">
+                            <div class="email-img">
+                                <img src="assets/mail (3).png" alt="">
+                            </div>
+                            <div class="email-body">
+                                <span>Email</span>
+                                <p>marcobaruco2091@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <div class="phone-img">
+                                <img src="assets/phone (2).png" alt="">
+                            </div>
+                            <div class="phone-body">
+                                <span>Telefone</span>
+                                <p>(11) 99622-1043</p>
+                            </div>
+                        </div>
+                        <div class="location">
+                            <div class="location-img">
+                                <img src="assets/map-pin (2).png" alt="">
+                            </div>
+                            <div class="location-body">
+                                <span>Localização</span>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formulario">
+                        <form action="https://formsubmit.co/marcobaruco2091@gmail.com" method="POST" class="form">
+                            <div>
+                                <div class="nome">
+                                    <label for="">Nome *</label>
+                                    <input type="text" name="name" id="name" required>
+                                    <div class="alert"></div>
+                                </div>
+                                <div class="mail">
+                                    <label for="">E-mail *</label>
+                                    <input type="email" name="email" id="email" required>
+                                    <div class="alert"></div>
+                                </div>
+                            </div>
+                            <div class="msg">
+                                <label for="">Mensagem *</label>
+                                <textarea name="message" id="message" required></textarea>
+                            </div>
+                            <button class="send-message-btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
     <script src="script/script.js"></script>
 </body>
 

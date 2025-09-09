@@ -60,15 +60,17 @@ header {
 
     .background {
         background: variables.$gradientHero;
-       
+
         .hero {
             height: 60dvh;
+            position: relative;
 
             .hero-container {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
 
                 .frontend {
                     background-color: variables.$primary;
@@ -83,11 +85,13 @@ header {
 
                 h1 {
                     color: variables.$foreground;
+                    margin: 1dvh;
                 }
 
                 .hero-paragraph {
                     color: variables.$muted;
                     font-size: 1.3rem;
+                    margin: 1dvh;
 
                     .angular {
                         color: variables.$ring;
@@ -102,7 +106,8 @@ header {
 
                 .hero-btn {
 
-                    .project, .portfolio {
+                    .project,
+                    .portfolio {
                         height: 7dvh;
                         width: 20dvh;
                         border: none;
@@ -126,11 +131,44 @@ header {
                         transition: background-color .9s, color .9s;
                     }
 
-                      .portfolio:hover {
+                    .portfolio:hover {
                         background-color: variables.$ring;
                         color: variables.$muted;
-                      }
+                    }
                 }
+            }
+
+            .circle1 {
+                width: 7dvh;
+                height: 7dvh;
+                border-radius: 50%;
+                background-color: variables.$primary;
+                position: absolute;
+                left: 10%;
+                bottom: 50%;
+                animation: slideUp 1s alternate infinite;
+            }
+
+            .circle2 {
+                width: 7dvh;
+                height: 7dvh;
+                border-radius: 50%;
+                background-color: variables.$accent;
+                position: absolute;
+                right: 65%;
+                bottom: 20%;
+                animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
+            }
+
+            .circle3 {
+                width: 7dvh;
+                height: 7dvh;
+                border-radius: 50%;
+                background-color: variables.$ring;
+                position: absolute;
+                right: 10%;
+                bottom: 40%;
+                animation: float 3s ease-in-out infinite;
             }
         }
     }
