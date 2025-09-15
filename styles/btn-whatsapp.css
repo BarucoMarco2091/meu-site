@@ -279,180 +279,38 @@
     justify-content: space-between;
   }
 }
-header .bg {
-  background-color: hsl(0, 0%, 100%);
+.btn-whatsapp {
+  position: fixed;
+  bottom: 15dvh;
+  right: 10dvh;
+  z-index: 5;
 }
-header .bg nav {
-  display: flex;
-  justify-content: space-between;
+
+.btn-whatsapp img {
+  max-width: 10dvh;
+  transition: transform 0.5s;
 }
-header .bg nav .logo img {
-  width: 7dvh;
-  height: 7dvh;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 50%;
+
+.btn-whatsapp img:hover {
+  transform: scale(1.2);
 }
-header .bg nav .nav-list .nav-link {
-  color: hsl(220, 9%, 46%);
-  transition: color 0.9s;
-}
-header .bg nav .nav-list .nav-link:hover {
-  color: hsl(214, 95%, 59%);
-}
-header .bg nav .nav-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2dvh;
-}
-header .bg nav .nav-icons button {
-  border-radius: 50%;
-  border: none;
-  width: 7dvh;
-  height: 7dvh;
-  background-color: hsl(220, 13%, 91%);
-  transition: background-color 0.9s;
-}
-header .bg nav .nav-icons button img {
-  width: 3dvh;
-  height: 3dvh;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-header .bg nav .nav-icons button:hover {
-  background-color: hsl(0, 84%, 60%);
-}
-header .bg nav #mobile_btn {
-  display: none;
-  background-color: transparent;
-  color: hsl(220, 14%, 96%);
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-header .bg #mobile_menu {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
   position: absolute;
-  top: 5rem;
-  width: 100%;
-  padding: 1rem;
-  z-index: 33;
-}
-header .bg #mobile_menu.active {
-  display: flex;
-}
-header .bg #mobile_menu #mobile_nav_list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  list-style-type: none;
+  width: 120px;
+  top: 2dvh;
+  left: -20dvh;
+  padding: 6px;
+  border-radius: 8px;
   text-align: center;
+  background-color: #232224;
+  color: #FFF;
+  opacity: 0;
+  transition: opacity 0.4s;
 }
-header .bg #mobile_menu .nav_item {
-  font-size: 1rem;
-}
-header .bg #mobile_menu .nav_item a {
-  text-decoration: none;
-  color: hsl(220, 9%, 46%);
-}
-header .background {
-  background: linear-gradient(135deg, hsl(214, 95%, 59%), hsl(262, 83%, 58%));
-}
-header .background .hero {
-  height: 60dvh;
-  position: relative;
-}
-header .background .hero .hero-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-header .background .hero .hero-container .frontend {
-  background-color: hsl(214, 95%, 59%);
-  padding: 1dvh;
-  border-radius: 2dvh;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  font-family: "Poppins", serif, Arial;
-  margin: 0 auto;
-  color: hsl(220, 14%, 96%);
-  margin: 2dvh;
-}
-header .background .hero .hero-container h1 {
-  color: hsl(220, 13%, 18%);
-  margin: 1dvh;
-}
-header .background .hero .hero-container .hero-paragraph {
-  color: hsl(220, 14%, 96%);
-  font-size: 1.3rem;
-  margin: 1dvh;
-}
-header .background .hero .hero-container .hero-paragraph .angular {
-  color: hsl(214, 95%, 59%);
-  font-size: 1.3rem;
-}
-header .background .hero .hero-container .hero-paragraph .javascript {
-  color: hsl(158, 64%, 52%);
-  font-size: 1.3rem;
-}
-header .background .hero .hero-container .hero-btn .project,
-header .background .hero .hero-container .hero-btn .portfolio {
-  height: 7dvh;
-  width: 20dvh;
-  border: none;
-  border-radius: 2dvh;
-  margin-right: 2dvh;
-}
-header .background .hero .hero-container .hero-btn .project {
-  background: linear-gradient(135deg, hsl(214, 95%, 59%), hsl(262, 83%, 58%));
-  color: hsl(220, 14%, 96%);
-  transition: transform 0.9s;
-}
-header .background .hero .hero-container .hero-btn .project:hover {
-  transform: scale(1.1);
-}
-header .background .hero .hero-container .hero-btn .portfolio {
-  border: 2px solid hsl(262, 83%, 58%);
-  color: hsl(214, 95%, 59%);
-  transition: background-color 0.9s, color 0.9s;
-}
-header .background .hero .hero-container .hero-btn .portfolio:hover {
-  background-color: hsl(214, 95%, 59%);
-  color: hsl(220, 14%, 96%);
-}
-header .background .hero .circle1 {
-  width: 7dvh;
-  height: 7dvh;
-  border-radius: 50%;
-  background-color: hsl(214, 95%, 59%);
-  position: absolute;
-  left: 10%;
-  bottom: 50%;
-  animation: slideUp 1s alternate infinite;
-}
-header .background .hero .circle2 {
-  width: 7dvh;
-  height: 7dvh;
-  border-radius: 50%;
-  background-color: hsl(158, 64%, 52%);
-  position: absolute;
-  right: 65%;
-  bottom: 20%;
-  animation: fadeIn 0.8s alternate infinite, slideUp 1s alternate infinite;
-}
-header .background .hero .circle3 {
-  width: 7dvh;
-  height: 7dvh;
-  border-radius: 50%;
-  background-color: hsl(214, 95%, 59%);
-  position: absolute;
-  right: 10%;
-  bottom: 40%;
-  animation: float 3s ease-in-out infinite;
-}/*# sourceMappingURL=header.css.map */
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}/*# sourceMappingURL=btn-whatsapp.css.map */

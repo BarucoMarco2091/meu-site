@@ -40,6 +40,22 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex !important;
+    padding: 1dvh 1dvh !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mobile_btn {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .nav-list {
+    display: none !important;
+  }
+}
 @media (width >= 1024px) {
   nav {
     display: flex;
@@ -192,6 +208,7 @@
     margin: auto !important;
     display: flex;
     margin-top: 5dvh;
+    padding-bottom: 5dvh;
   }
   .contacts h2 {
     margin: 5dvh;
@@ -199,11 +216,14 @@
   .contacts h2 span {
     font-size: 3rem !important;
   }
+  .contacts p {
+    font-size: 1.2rem;
+  }
   .contacts .contact-container {
     display: flex;
     flex-direction: row !important;
-    max-width: 1240px;
-    margin: auto;
+    max-width: 1240px !important;
+    margin: auto !important;
     margin-top: 5dvh;
   }
   .contacts .contact-container div {
@@ -221,6 +241,12 @@
     line-height: 2rem;
     margin-bottom: 3dvh;
   }
+  .contacts .contact-container .contact .email,
+  .contacts .contact-container .contact .location,
+  .contacts .contact-container .contact .phone {
+    display: flex;
+    width: 90% !important;
+  }
   .contacts .formulario {
     display: flex;
     align-items: center;
@@ -229,9 +255,32 @@
   .contacts .formulario div {
     display: flex;
   }
+  .contacts .formulario .nome,
+  .contacts .formulario .mail,
+  .contacts .formulario .msg {
+    margin: 3dvh;
+  }
+  .contacts .formulario .nome label,
+  .contacts .formulario .mail label,
+  .contacts .formulario .msg label {
+    margin-bottom: 2dvh;
+  }
+  .contacts .formulario .send-message-btn {
+    width: 90% !important;
+  }
+}
+@media (width >= 1024px) {
+  .footer-container {
+    padding-top: 5dvh;
+    display: flex;
+    flex-direction: row !important;
+    max-width: 1240px;
+    margin: auto;
+    justify-content: space-between;
+  }
 }
 main {
-  padding: 1dvh 1dvh;
+  padding: 1dvh 1dvh !important;
 }
 main .title {
   display: flex;
@@ -580,7 +629,8 @@ main .back .contacts {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 1dvh 1dvh;
+  padding: 1dvh 1dvh;
+  border-bottom: 1px solid hsl(220, 13%, 91%);
 }
 main .back .contacts h2 {
   color: hsl(220, 13%, 18%);
@@ -594,16 +644,24 @@ main .back .contacts h2 span {
 }
 main .back .contacts p {
   color: hsl(220, 9%, 46%);
-  font-size: 1.2rem;
   margin-bottom: 2dvh;
 }
 main .back .contacts .contact-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .back .contacts .contact-container .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 main .back .contacts .contact-container .contact h3 {
   font-family: "Poppins", serif, Arial;
-  font-size: 2rem;
   font-weight: 600;
   color: hsl(220, 13%, 18%);
   margin: 1dvh 1dvh;
@@ -615,11 +673,13 @@ main .back .contacts .contact-container .contact .phone {
   height: -moz-fit-content;
   height: fit-content;
   margin: 2dvh;
-  max-width: 90%;
+  width: 90%;
   border: 2px solid hsl(220, 13%, 91%);
   border-radius: 2dvh;
 }
-main .back .contacts .contact-container .contact .email .email-img, main .back .contacts .contact-container .contact .email .phone-img, main .back .contacts .contact-container .contact .email .location-img,
+main .back .contacts .contact-container .contact .email .email-img,
+main .back .contacts .contact-container .contact .email .phone-img,
+main .back .contacts .contact-container .contact .email .location-img,
 main .back .contacts .contact-container .contact .location .email-img,
 main .back .contacts .contact-container .contact .location .phone-img,
 main .back .contacts .contact-container .contact .location .location-img,
@@ -629,7 +689,9 @@ main .back .contacts .contact-container .contact .phone .location-img {
   display: flex;
   justify-content: start;
 }
-main .back .contacts .contact-container .contact .email .email-img img, main .back .contacts .contact-container .contact .email .phone-img img, main .back .contacts .contact-container .contact .email .location-img img,
+main .back .contacts .contact-container .contact .email .email-img img,
+main .back .contacts .contact-container .contact .email .phone-img img,
+main .back .contacts .contact-container .contact .email .location-img img,
 main .back .contacts .contact-container .contact .location .email-img img,
 main .back .contacts .contact-container .contact .location .phone-img img,
 main .back .contacts .contact-container .contact .location .location-img img,
@@ -640,7 +702,9 @@ main .back .contacts .contact-container .contact .phone .location-img img {
   height: 4dvh;
   margin: 1dvh 1dvh;
 }
-main .back .contacts .contact-container .contact .email .email-body, main .back .contacts .contact-container .contact .email .phone-body, main .back .contacts .contact-container .contact .email .location-body,
+main .back .contacts .contact-container .contact .email .email-body,
+main .back .contacts .contact-container .contact .email .phone-body,
+main .back .contacts .contact-container .contact .email .location-body,
 main .back .contacts .contact-container .contact .location .email-body,
 main .back .contacts .contact-container .contact .location .phone-body,
 main .back .contacts .contact-container .contact .location .location-body,
@@ -652,7 +716,9 @@ main .back .contacts .contact-container .contact .phone .location-body {
   justify-content: start;
   margin: 1dvh 1dvh;
 }
-main .back .contacts .contact-container .contact .email .email-body span, main .back .contacts .contact-container .contact .email .phone-body span, main .back .contacts .contact-container .contact .email .location-body span,
+main .back .contacts .contact-container .contact .email .email-body span,
+main .back .contacts .contact-container .contact .email .phone-body span,
+main .back .contacts .contact-container .contact .email .location-body span,
 main .back .contacts .contact-container .contact .location .email-body span,
 main .back .contacts .contact-container .contact .location .phone-body span,
 main .back .contacts .contact-container .contact .location .location-body span,
@@ -664,19 +730,53 @@ main .back .contacts .contact-container .contact .phone .location-body span {
 }
 main .back .formulario {
   display: flex;
+  justify-content: center;
 }
-main .back .formulario .nome, main .back .formulario .mail, main .back .formulario .msg {
+main .back .formulario .nome,
+main .back .formulario .mail,
+main .back .formulario .msg {
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
-main .back .formulario .nome label, main .back .formulario .mail label, main .back .formulario .msg label {
+main .back .formulario .nome label,
+main .back .formulario .mail label,
+main .back .formulario .msg label {
   font-family: "Poppins", serif, Arial;
   font-size: 1rem;
   color: hsl(220, 13%, 18%);
 }
-main .back .formulario .nome input, main .back .formulario .mail input, main .back .formulario .msg input {
+main .back .formulario .nome input,
+main .back .formulario .mail input,
+main .back .formulario .msg input {
   width: 90%;
   height: 6dvh;
   border-radius: 2dvh;
   border: 2px solid hsl(220, 13%, 91%);
+  text-align: center;
+  margin: 1dvh 0;
+}
+main .back .formulario .nome textarea,
+main .back .formulario .mail textarea,
+main .back .formulario .msg textarea {
+  height: 20dvh;
+  border-radius: 2dvh;
+  border: 2px solid hsl(220, 13%, 91%);
+  text-align: center;
+  margin: 1dvh 0;
+}
+main .back .formulario .send-message-btn {
+  height: 8dvh;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: none;
+  text-align: start;
+  padding: 2dvh 2dvh;
+  background: linear-gradient(135deg, hsl(214, 95%, 59%), hsl(262, 83%, 58%));
+  border-radius: 2dvh;
+  color: hsl(220, 14%, 96%);
+  transition: transform 0.9s;
+}
+main .back .formulario .send-message-btn:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

@@ -1,2 +1,95 @@
 @use 'variables';
 @use 'responsivity';
+
+footer {
+    background-color: variables.$background;
+    padding: 1dvh 1dvh;
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3dvh;
+        text-align: center;
+
+        .footer-text {
+
+            p {
+                line-height: 2rem;
+                color: variables.$mutedForeground;
+            }
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 2dvh;
+
+            button {
+                border-radius: 50%;
+                border: none;
+                width: 7dvh;
+                height: 7dvh;
+                background-color: variables.$border;
+                transition: background-color .9s;
+
+                img {
+                    width: 3dvh;
+                    height: 3dvh;
+                    object-fit: contain;
+                }
+            }
+
+
+            button:hover {
+                background-color: variables.$destructive;
+            }
+        }
+
+        .navigation-container,
+        .services-container,
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                color: variables.$foreground;
+                font-weight: 600;
+                margin-bottom: 2dvh;
+            }
+
+            .footer-navigation,
+            .services {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .nav-list {
+                    list-style: none;
+
+                    .nav-link {
+                        color: variables.$mutedForeground;
+                        margin-top: 1dvh;
+                        transition: color .9s;
+                    }
+
+                    .nav-link:hover {
+                        color: variables.$ring;
+                    }
+                }
+            }
+
+            .contact {
+                color: variables.$mutedForeground;
+                margin-top: 1dvh;
+
+                p {
+                    margin-top: 1dvh;
+                }
+            }
+        }
+    }
+}

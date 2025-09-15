@@ -4,14 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Baruco | Desenvolvedor Front-End Freelancer</title>
+    <meta name="description"
+        content="Portfólio de Marco Baruco, desenvolvedor front-end freelancer. Criação de sites modernos, responsivos e otimizados para negócios e profissionais. Veja meus projetos.">
+    <meta name="keywords"
+        content="desenvolvedor front-end, freelancer, criação de sites, landing pages, portfólio, web design, sites responsivos, Brasil">
+    <meta name="author" content="Marco Aurélio Tamaki Baruco">
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Marco Baruco | Desenvolvedor Front-End Freelancer">
+    <meta property="og:description"
+        content="Veja meu portfólio de sites modernos e responsivos. Criação de sites institucionais, landing pages e soluções personalizadas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seudominio.com.br/">
+    <meta property="og:image" content="https://seudominio.com.br/imagem-preview.jpg">
     <link rel="shortcut icon" href="assets/Logotipo Moderno Tecnologia e Gaming Roxo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/btn-whatsapp.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/responsivity.css">
     <link rel="stylesheet" href="styles/variables.css">
-    <title>Document</title>
 </head>
 
 <body>
@@ -51,7 +65,26 @@
                                 src="assets/instagram (2).png" alt=""></a>
                     </button>
                 </div>
+                <button id="mobile_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </nav>
+            <div id="mobile_menu">
+                <ul id="mobile_nav_list">
+                    <li class="nav_item">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#trabalhos">Projetos</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="background">
             <div class="hero">
@@ -63,9 +96,10 @@
                         <span class="javascript">JavaScript.</span>
                     </p>
                     <div class="hero-btn">
-                        <button class="project">
-                            Iniciar Projeto
-                        </button>
+                        <a href="https://api.whatsapp.com/send?phone=5511996221043&text=Quero%20fazer%20um%20agendamento%20hoje!"
+                            target="_blank"><button class="project">
+                                Iniciar Projeto
+                            </button></a>
                         <a href="https://new-portfolio-omega-nine.vercel.app/" target="_blank"><button
                                 class="portfolio">
                                 Ver Portfólio
@@ -306,7 +340,7 @@
                             </div>
                             <div class="email-body">
                                 <span>Email</span>
-                                <p>marcobaruco2091@gmail.com</p>
+                                <p class="email-paragraph">marcobaruco2091@gmail.com</p>
                             </div>
                         </div>
                         <div class="phone">
@@ -315,7 +349,7 @@
                             </div>
                             <div class="phone-body">
                                 <span>Telefone</span>
-                                <p>(11) 99622-1043</p>
+                                <p class="phone-paragraph">(11) 99622-1043</p>
                             </div>
                         </div>
                         <div class="location">
@@ -324,7 +358,7 @@
                             </div>
                             <div class="location-body">
                                 <span>Localização</span>
-                                <p>São Paulo, Brasil</p>
+                                <p class="location-paragraph">São Paulo, Brasil</p>
                             </div>
                         </div>
                     </div>
@@ -333,18 +367,19 @@
                             <div>
                                 <div class="nome">
                                     <label for="">Nome *</label>
-                                    <input type="text" name="name" id="name" required>
+                                    <input type="text" name="name" id="name" placeholder="Seu nome completo" required>
                                     <div class="alert"></div>
                                 </div>
                                 <div class="mail">
                                     <label for="">E-mail *</label>
-                                    <input type="email" name="email" id="email" required>
+                                    <input type="email" name="email" id="email" placeholder="seu@email.com" required>
                                     <div class="alert"></div>
                                 </div>
                             </div>
                             <div class="msg">
                                 <label for="">Mensagem *</label>
-                                <textarea name="message" id="message" required></textarea>
+                                <textarea name="message" id="message" placeholder="Conte-me sobre o seu projeto..."
+                                    required></textarea>
                             </div>
                             <button class="send-message-btn">Enviar Mensagem</button>
                         </form>
@@ -354,9 +389,75 @@
         </div>
     </main>
     <footer>
-        <div class="footer-container"></div>
+        <div class="footer-container">
+            <div>
+                <div class="footer-text">
+                    <p>Desenvolvedor front-end freelancer<br>apaixonado por criar experiências<br>digitais incríveis e
+                        funcionais.</p>
+                </div>
+                <div class="footer-icons">
+                    <button>
+                        <a href="https://github.com/BarucoMarco2091" target="_blank"><img src="assets/github.png"
+                                alt=""></a>
+                    </button>
+                    <button>
+                        <a href="https://www.linkedin.com/in/marco-baruco-3bb3512a3/" target="_blank"><img
+                                src="assets/linkedin.png" alt=""></a>
+                    </button>
+                    <button>
+                        <a href="https://www.instagram.com/baruco_dev/" target="_blank"><img
+                                src="assets/instagram (2).png" alt=""></a>
+                    </button>
+                </div>
+            </div>
+            <div class="navigation-container">
+                <span>Navegação</span>
+                <div class="footer-navigation">
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#trabalhos">Projetos</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-container">
+                <span>Serviços</span>
+                <div class="services">
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-link" href="#">Desenvolvimento Web</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Manutenção</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-container">
+                <span>Contato</span>
+                <div class="contact">
+                    <p>marcobaruco2091@gmail.com</p>
+                    <p>(11) 99622-1043</p>
+                    <p>São Paulo, Brasil</p>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
+    <a href="https://api.whatsapp.com/send?phone=5511996221043&text=Quero%20fazer%20um%20agendamento%20hoje!"
+        class="btn-whatsapp" target="_blank"><img src="assets/whatssapp (1).svg" alt=""><span
+            class="tooltip-text">Contact me</span>
+        </span></a>
 </body>
 
 </html>

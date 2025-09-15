@@ -3,7 +3,7 @@
 
 main {
 
-    padding: 1dvh 1dvh;
+    padding: 1dvh 1dvh !important;
 
     .title {
         display: flex;
@@ -426,7 +426,8 @@ main {
             justify-content: center;
             text-align: center;
             align-items: center;
-            margin: 1dvh 1dvh;
+            padding: 1dvh 1dvh;
+            border-bottom: 1px solid variables.$border;
 
             h2 {
                 color: variables.$foreground;
@@ -442,19 +443,25 @@ main {
 
             p {
                 color: variables.$mutedForeground;
-                font-size: 1.2rem;
                 margin-bottom: 2dvh;
             }
 
             .contact-container {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
                 .contact {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
 
                     h3 {
                         font-family: 'Poppins', serif, Arial;
-                        font-size: 2rem;
                         font-weight: 600;
                         color: variables.$foreground;
                         margin: 1dvh 1dvh;
@@ -466,11 +473,13 @@ main {
                         display: flex;
                         height: fit-content;
                         margin: 2dvh;
-                        max-width: 90%;
+                        width: 90%;
                         border: 2px solid variables.$border;
                         border-radius: 2dvh;
 
-                        .email-img, .phone-img, .location-img {
+                        .email-img,
+                        .phone-img,
+                        .location-img {
                             display: flex;
                             justify-content: start;
 
@@ -481,7 +490,9 @@ main {
                             }
                         }
 
-                        .email-body, .phone-body, .location-body {
+                        .email-body,
+                        .phone-body,
+                        .location-body {
                             display: flex;
                             flex-direction: column;
                             justify-content: start;
@@ -499,10 +510,14 @@ main {
 
         .formulario {
             display: flex;
+            justify-content: center;
 
-            .nome, .mail, .msg {
+            .nome,
+            .mail,
+            .msg {
                 display: flex;
                 flex-direction: column;
+                text-align: start;
 
                 label {
                     font-family: 'Poppins', serif, Arial;
@@ -515,7 +530,33 @@ main {
                     height: 6dvh;
                     border-radius: 2dvh;
                     border: 2px solid variables.$border;
+                    text-align: center;
+                    margin: 1dvh 0;
                 }
+
+                textarea {
+                    height: 20dvh;
+                    border-radius: 2dvh;
+                    border: 2px solid variables.$border;
+                    text-align: center;
+                    margin: 1dvh 0;
+                }
+            }
+
+            .send-message-btn {
+                height: 8dvh;
+                max-width: fit-content;
+                border: none;
+                text-align: start;
+                padding: 2dvh 2dvh;
+                background: variables.$gradientPrimary;
+                border-radius: 2dvh;
+                color: variables.$muted;
+                transition: transform .9s;
+            }
+
+            .send-message-btn:hover {
+                transform: scale(1.1);
             }
         }
     }

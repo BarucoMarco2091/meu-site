@@ -40,6 +40,22 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex !important;
+    padding: 1dvh 1dvh !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mobile_btn {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .nav-list {
+    display: none !important;
+  }
+}
 @media (width >= 1024px) {
   nav {
     display: flex;
@@ -192,6 +208,7 @@
     margin: auto !important;
     display: flex;
     margin-top: 5dvh;
+    padding-bottom: 5dvh;
   }
   .contacts h2 {
     margin: 5dvh;
@@ -199,11 +216,14 @@
   .contacts h2 span {
     font-size: 3rem !important;
   }
+  .contacts p {
+    font-size: 1.2rem;
+  }
   .contacts .contact-container {
     display: flex;
     flex-direction: row !important;
-    max-width: 1240px;
-    margin: auto;
+    max-width: 1240px !important;
+    margin: auto !important;
     margin-top: 5dvh;
   }
   .contacts .contact-container div {
@@ -221,9 +241,141 @@
     line-height: 2rem;
     margin-bottom: 3dvh;
   }
+  .contacts .contact-container .contact .email,
+  .contacts .contact-container .contact .location,
+  .contacts .contact-container .contact .phone {
+    display: flex;
+    width: 90% !important;
+  }
   .contacts .formulario {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .contacts .formulario div {
+    display: flex;
+  }
+  .contacts .formulario .nome,
+  .contacts .formulario .mail,
+  .contacts .formulario .msg {
+    margin: 3dvh;
+  }
+  .contacts .formulario .nome label,
+  .contacts .formulario .mail label,
+  .contacts .formulario .msg label {
+    margin-bottom: 2dvh;
+  }
+  .contacts .formulario .send-message-btn {
+    width: 90% !important;
+  }
+}
+@media (width >= 1024px) {
+  .footer-container {
+    padding-top: 5dvh;
+    display: flex;
+    flex-direction: row !important;
+    max-width: 1240px;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+footer {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1dvh 1dvh;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3dvh;
+  text-align: center;
+}
+footer .footer-container .footer-text p {
+  line-height: 2rem;
+  color: hsl(220, 9%, 46%);
+}
+footer .footer-container .footer-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2dvh;
+}
+footer .footer-container .footer-icons button {
+  border-radius: 50%;
+  border: none;
+  width: 7dvh;
+  height: 7dvh;
+  background-color: hsl(220, 13%, 91%);
+  transition: background-color 0.9s;
+}
+footer .footer-container .footer-icons button img {
+  width: 3dvh;
+  height: 3dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .footer-container .footer-icons button:hover {
+  background-color: hsl(0, 84%, 60%);
+}
+footer .footer-container .navigation-container,
+footer .footer-container .services-container,
+footer .footer-container .contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .navigation-container span,
+footer .footer-container .services-container span,
+footer .footer-container .contact-container span {
+  color: hsl(220, 13%, 18%);
+  font-weight: 600;
+  margin-bottom: 2dvh;
+}
+footer .footer-container .navigation-container .footer-navigation,
+footer .footer-container .navigation-container .services,
+footer .footer-container .services-container .footer-navigation,
+footer .footer-container .services-container .services,
+footer .footer-container .contact-container .footer-navigation,
+footer .footer-container .contact-container .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .navigation-container .footer-navigation .nav-list,
+footer .footer-container .navigation-container .services .nav-list,
+footer .footer-container .services-container .footer-navigation .nav-list,
+footer .footer-container .services-container .services .nav-list,
+footer .footer-container .contact-container .footer-navigation .nav-list,
+footer .footer-container .contact-container .services .nav-list {
+  list-style: none;
+}
+footer .footer-container .navigation-container .footer-navigation .nav-list .nav-link,
+footer .footer-container .navigation-container .services .nav-list .nav-link,
+footer .footer-container .services-container .footer-navigation .nav-list .nav-link,
+footer .footer-container .services-container .services .nav-list .nav-link,
+footer .footer-container .contact-container .footer-navigation .nav-list .nav-link,
+footer .footer-container .contact-container .services .nav-list .nav-link {
+  color: hsl(220, 9%, 46%);
+  margin-top: 1dvh;
+  transition: color 0.9s;
+}
+footer .footer-container .navigation-container .footer-navigation .nav-list .nav-link:hover,
+footer .footer-container .navigation-container .services .nav-list .nav-link:hover,
+footer .footer-container .services-container .footer-navigation .nav-list .nav-link:hover,
+footer .footer-container .services-container .services .nav-list .nav-link:hover,
+footer .footer-container .contact-container .footer-navigation .nav-list .nav-link:hover,
+footer .footer-container .contact-container .services .nav-list .nav-link:hover {
+  color: hsl(214, 95%, 59%);
+}
+footer .footer-container .navigation-container .contact,
+footer .footer-container .services-container .contact,
+footer .footer-container .contact-container .contact {
+  color: hsl(220, 9%, 46%);
+  margin-top: 1dvh;
+}
+footer .footer-container .navigation-container .contact p,
+footer .footer-container .services-container .contact p,
+footer .footer-container .contact-container .contact p {
+  margin-top: 1dvh;
 }/*# sourceMappingURL=footer.css.map */
